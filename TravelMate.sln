@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelMate.Infrastructure",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelMate.Api", "TravelMate.Api\TravelMate.Api\TravelMate.Api.csproj", "{13736E87-F79A-410B-BAC5-F61B180275F9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelMate.UnitTest", "TravelMate.UnitTest\TravelMate.UnitTest\TravelMate.UnitTest.csproj", "{1EA10AAE-62D6-4AD6-AA8E-FD394CAAC57D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{13736E87-F79A-410B-BAC5-F61B180275F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13736E87-F79A-410B-BAC5-F61B180275F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13736E87-F79A-410B-BAC5-F61B180275F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EA10AAE-62D6-4AD6-AA8E-FD394CAAC57D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EA10AAE-62D6-4AD6-AA8E-FD394CAAC57D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EA10AAE-62D6-4AD6-AA8E-FD394CAAC57D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EA10AAE-62D6-4AD6-AA8E-FD394CAAC57D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

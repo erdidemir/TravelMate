@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\TravelMate.Domain\TravelMate.Domain\TravelMate.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

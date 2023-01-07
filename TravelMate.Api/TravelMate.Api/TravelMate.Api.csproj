@@ -15,4 +15,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\TravelMate.Application\TravelMate.Application\TravelMate.Application.csproj" />
+    <ProjectReference Include="..\..\TravelMate.Infrastructure\TravelMate.Infrastructure\TravelMate.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>
