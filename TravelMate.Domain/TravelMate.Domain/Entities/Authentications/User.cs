@@ -29,19 +29,6 @@ namespace TravelMate.Domain.Entities.Authentications
         public string LastName { get; set; }
 
         /// <summary>
-        /// 
-        /// </summary>
-        public string VerifyCode { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public DateTime VerifyDate { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public bool Verified { get; set; }
-
-        /// <summary>
         /// Gets or sets Last Login Date 
         /// if there is no login for x days, user have to delete
         /// </summary>
