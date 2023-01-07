@@ -5,7 +5,9 @@ using TravelMate.Application.Features.Commands.Commons.Updates;
 using TravelMate.Application.Features.Commands.Settings.Adds.AddCountry;
 using TravelMate.Application.Features.Commands.Travels.Adds;
 using TravelMate.Application.Features.Commands.Travels.Updates;
+using TravelMate.Application.Features.Queries.Travel.GetTravel;
 using TravelMate.Application.Models.Commons;
+using TravelMate.Application.Models.Travels;
 using TravelMate.Domain.Enums.Commons;
 
 namespace TravelMate.Api.Controllers
@@ -37,6 +39,14 @@ namespace TravelMate.Api.Controllers
         public async Task<IActionResult> StockingOrderUnitLoadCell(PublishOrUnPublishTravelCommand request)
         {
             var response = await _mediator.Send(request);
+            return CreateActionResult(response);
+        }
+
+
+        [HttpGet("search")]
+        public async Task<IActionResult> SearchTravel([FromQuery] GetTravelBySearchQuery query)
+        {
+            var response = await _mediator.Send(query);
             return CreateActionResult(response);
         }
 
