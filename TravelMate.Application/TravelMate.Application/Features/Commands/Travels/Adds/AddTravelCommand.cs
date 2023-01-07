@@ -32,5 +32,7 @@ namespace TravelMate.Application.Features.Commands.Travels.Adds
         public string Description { get; set; }
         public int SeatingCapacity { get; set; }
 
+        public bool IsActive { get; set; }
+
     }
 }

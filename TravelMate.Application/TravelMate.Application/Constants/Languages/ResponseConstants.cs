@@ -55,6 +55,7 @@ namespace TravelMate.Application.Constants.Languages
         public const string SupplierIsRequired = "Supplier is required.";
         public const string AmountIsRequired = "Amount is required.";
         public const string DescriptionIsRequired = "Description is required.";
+        public const string IdIsRequired = "Id is required.";
         public const string CategoryIsRequired = "Category is required.";
         public const string LinkIsRequired = "Link is required.";
         public const string OrderIsRequired = "Order is required.";

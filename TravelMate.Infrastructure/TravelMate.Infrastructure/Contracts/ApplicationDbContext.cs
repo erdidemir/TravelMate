@@ -24,7 +24,6 @@ namespace TravelMate.Infrastructure.Contracts
                 switch (entry.State)
                 {
                     case EntityState.Added:
-                        entry.Entity.IsActive = true;
                         entry.Entity.CreatedDate = DateTime.Now;
                         entry.Entity.LastModifiedDate = DateTime.Now;
                         entry.Entity.IsDeleted = false;

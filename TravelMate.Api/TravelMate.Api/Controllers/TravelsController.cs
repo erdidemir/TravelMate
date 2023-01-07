@@ -1,8 +1,10 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
+using TravelMate.Application.Features.Commands.Commons.Updates;
 using TravelMate.Application.Features.Commands.Settings.Adds.AddCountry;
 using TravelMate.Application.Features.Commands.Travels.Adds;
+using TravelMate.Application.Features.Commands.Travels.Updates;
 using TravelMate.Application.Models.Commons;
 using TravelMate.Domain.Enums.Commons;
 
@@ -29,6 +31,13 @@ namespace TravelMate.Api.Controllers
             var response = await _mediator.Send(request);
             return CreateActionResult(response);
 
+        }
+
+        [HttpPut("publish")]
+        public async Task<IActionResult> StockingOrderUnitLoadCell(PublishOrUnPublishTravelCommand request)
+        {
+            var response = await _mediator.Send(request);
+            return CreateActionResult(response);
         }
 
         public IActionResult CreateActionResult<T>(ResponseViewModelBase<T> response)
