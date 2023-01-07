@@ -4,14 +4,17 @@ using Microsoft.Extensions.DependencyInjection;
 using TravelMate.Application.Contracts.Repositories.Commons;
 using TravelMate.Application.Contracts.Repositories.Languages;
 using TravelMate.Application.Contracts.Repositories.Settings;
+using TravelMate.Application.Contracts.Repositories.Travels;
 using TravelMate.Application.Services.Authentications;
 using TravelMate.Application.Services.Commons;
 using TravelMate.Application.Services.Languages;
 using TravelMate.Application.Services.Settings;
+using TravelMate.Application.Services.Travels;
 using TravelMate.Infrastructure.Contracts;
 using TravelMate.Infrastructure.Contracts.Repositories.Commons;
 using TravelMate.Infrastructure.Contracts.Repositories.Languages;
 using TravelMate.Infrastructure.Contracts.Repositories.Settings;
+using TravelMate.Infrastructure.Contracts.Repositories.Travels;
 using TravelMate.Infrastructure.Services.Authentications;
 using TravelMate.Infrastructure.Services.Commons;
 using TravelMate.Infrastructure.Services.Languages;
@@ -59,6 +62,18 @@ namespace TravelMate.Infrastructure
             services.AddScoped<ICountryReadRepository, CountryReadRepository>();
             services.AddScoped<ICountryWriteRepository, CountryWriteRepository>();
             services.AddScoped<ICountryService, CountryService>();
+
+            #endregion
+
+            #region Travels
+
+            services.AddScoped<ILocationReadRepository, LocationReadRepository>();
+            services.AddScoped<ILocationWriteRepository, LocationWriteRepository>();
+            services.AddScoped<ILocationService, LocationService>();
+
+            services.AddScoped<ITravelReadRepository, TravelReadRepository>();
+            services.AddScoped<ITravelWriteRepository, TravelWriteRepository>();
+            services.AddScoped<ITravelService, TravelService>();
 
             #endregion
 

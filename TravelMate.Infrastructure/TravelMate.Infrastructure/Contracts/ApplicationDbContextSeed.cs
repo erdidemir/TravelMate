@@ -1,10 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TravelMate.Domain.Entities.Authentications;
 using TravelMate.Infrastructure.Contracts.Seeds.Authentications;
 using TravelMate.Infrastructure.Contracts.Seeds.Languages;
@@ -75,7 +70,6 @@ namespace TravelMate.Infrastructure.Contracts
             }
             #endregion
 
-
             #region LanguageResource
 
             if (!applicationContext.LanguageResources.Any())
@@ -89,9 +83,6 @@ namespace TravelMate.Infrastructure.Contracts
             }
             #endregion
           
-
-          
-
             logger.LogInformation("Seed database associated with context {DbContextName}", typeof(ApplicationDbContext).Name);
         }
 

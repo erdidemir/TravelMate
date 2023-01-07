@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TravelMate.Domain.Entities.Commons;
+using TravelMate.Domain.Entities.Travels;
 
 namespace TravelMate.Domain.Entities.Settings
 {
@@ -13,5 +14,7 @@ namespace TravelMate.Domain.Entities.Settings
         public string Name { get; set; }
         public string Code { get; set; }
         public string PhoneCode { get; set; }
+
+        public ICollection<Location> Locations { get; set; }
     }
 }

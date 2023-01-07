@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using TravelMate.Domain.Entities.Travels;
 
 namespace TravelMate.Domain.Entities.Authentications
 {
@@ -34,5 +35,10 @@ namespace TravelMate.Domain.Entities.Authentications
         /// </summary>
         public DateTime LastLoginDate { get; set; }
 
-      }
+        public ICollection<Location> Locations { get; set; }
+        public ICollection<Travel> Travels { get; set; }
+    }
+
 }
+
+   
