@@ -1,16 +1,10 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TravelMate.Application.Constants.Languages;
 using TravelMate.Application.Models.Commons;
 using TravelMate.Application.Services.Authentications;
 using TravelMate.Application.Services.Languages;
 using TravelMate.Application.Settings.Informations;
-using TravelMate.Application.Settings.Languages;
 using TravelMate.Domain.Entities.Authentications;
 using TravelMate.Domain.Enums.Commons;
 
@@ -46,7 +40,7 @@ namespace TravelMate.Infrastructure.Services.Authentications
                 var userEntity = await _userManager.FindByEmailAsync(user.Email);
                 var roleresult = _userManager.AddToRoleAsync(userEntity, "User");
               
-                responseMessage = await _languageResourceService.GetTranslateAsync(ResponseConstants.WelcomeToDeliverist, LanguageInfo.Code);
+                responseMessage = await _languageResourceService.GetTranslateAsync(ResponseConstants.WelcomeToTravelMate, LanguageInfo.Code);
                 return ResponseViewModelBase<NoContent>.Success(responseMessage, ResultTypeEnum.Success);
             }
             else if (duplicate is not null)

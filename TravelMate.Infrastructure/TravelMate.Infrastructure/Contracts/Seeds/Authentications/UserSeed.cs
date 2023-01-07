@@ -23,7 +23,7 @@ namespace TravelMate.Infrastructure.Contracts.Seeds.Authentications
 
                  new User {
                     FirstName="User",
-                    LastName="Deliverist",
+                    LastName="TravelMate",
                     UserName="erdieymendemir@gmail.com",
                     NormalizedUserName="ERDIEYMENDEMIR@GMAIL.COM",
                     Email="erdieymendemir@gmail.com",

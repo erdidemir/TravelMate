@@ -21,7 +21,7 @@ namespace TravelMate.Infrastructure.Contracts.Seeds.Languages
                 new  LanguageResource {LanguageCode="tr-TR",Name=ResponseConstants.ThePasswordWasChanged, Value= "Şifre değiştirildi."},
                 new  LanguageResource {LanguageCode="tr-TR",Name=ResponseConstants.EmailSuccessfulyConfirmed, Value="E-posta başarıyla onaylandı."},
                 new  LanguageResource {LanguageCode="tr-TR",Name=ResponseConstants.EmailVerificationFailed, Value="E-posta doğrulaması başarısız oldu, lütfen tekrar deneyin."},
-                new  LanguageResource {LanguageCode="tr-TR",Name=ResponseConstants.WelcomeToDeliverist, Value="Deliverist'e hoşgeldiniz."},
+                new  LanguageResource {LanguageCode="tr-TR",Name=ResponseConstants.WelcomeToTravelMate, Value="TravelMate'e hoşgeldiniz."},
                 new  LanguageResource {LanguageCode="tr-TR",Name=ResponseConstants.EmailOrPassWordIncorrent, Value="E-posta veya şifre yanlış."},
                 new  LanguageResource {LanguageCode="tr-TR",Name=ResponseConstants.UserNotFound, Value="Kullanıcı bulunamadı."},
                 new  LanguageResource {LanguageCode="tr-TR",Name=ResponseConstants.CountryNotFound, Value="Ülke bulunamadı."},

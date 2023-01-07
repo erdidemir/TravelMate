@@ -26,7 +26,7 @@ namespace TravelMate.Infrastructure.Contracts.Seeds.Languages
                 new  LanguageResource {LanguageCode="ru-RU",Name=ResponseConstants.ThePasswordWasChanged, Value= "Пароль был изменен"},
                 new  LanguageResource {LanguageCode="ru-RU",Name=ResponseConstants.EmailSuccessfulyConfirmed, Value="Электронная почта успешно подтверждена."},
                 new  LanguageResource {LanguageCode="ru-RU",Name=ResponseConstants.EmailVerificationFailed, Value="Не удалось подтвердить адрес электронной почты, попробуйте еще раз."},
-                new  LanguageResource {LanguageCode="ru-RU",Name=ResponseConstants.WelcomeToDeliverist, Value="Добро пожаловать в Deliverist."},
+                new  LanguageResource {LanguageCode="ru-RU",Name=ResponseConstants.WelcomeToTravelMate, Value="Добро пожаловать в TravelMate."},
                 new  LanguageResource {LanguageCode="ru-RU",Name=ResponseConstants.EmailOrPassWordIncorrent, Value="Электронная почта или пароль неверны."},
                 new  LanguageResource {LanguageCode="ru-RU",Name=ResponseConstants.UserNotFound, Value="Пользователь не найден."},
                 new  LanguageResource {LanguageCode="ru-RU",Name=ResponseConstants.CountryNotFound, Value="Страна не найдена."},

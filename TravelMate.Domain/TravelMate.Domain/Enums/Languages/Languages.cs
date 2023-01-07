@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TravelMate.Domain.Enums
+namespace TravelMate.Domain.Enums.Languages
 {
     public enum LanguageEnum
     {

@@ -26,7 +26,7 @@ namespace TravelMate.Infrastructure.Contracts.Seeds.Languages
                 new  LanguageResource {LanguageCode="de-DE",Name=ResponseConstants.ThePasswordWasChanged, Value= "Das Passwort wurde geändert."},
                 new  LanguageResource {LanguageCode="de-DE",Name=ResponseConstants.EmailSuccessfulyConfirmed, Value="E-Mail erfolgreich bestätigt."},
                 new  LanguageResource {LanguageCode="de-DE",Name=ResponseConstants.EmailVerificationFailed, Value="E-Mail-Bestätigung fehlgeschlagen, bitte."},
-                new  LanguageResource {LanguageCode="de-DE",Name=ResponseConstants.WelcomeToDeliverist, Value="Willkommen bei Deliverist."},
+                new  LanguageResource {LanguageCode="de-DE",Name=ResponseConstants.WelcomeToTravelMate, Value="Willkommen bei TravelMate."},
                 new  LanguageResource {LanguageCode="de-DE",Name=ResponseConstants.EmailOrPassWordIncorrent, Value="E-Mail oder Passwort falsch."},
                 new  LanguageResource {LanguageCode="de-DE",Name=ResponseConstants.UserNotFound, Value="Benutzer nicht gefunden."},
                 new  LanguageResource {LanguageCode="de-DE",Name=ResponseConstants.CountryNotFound, Value="Land nicht gefunden."},

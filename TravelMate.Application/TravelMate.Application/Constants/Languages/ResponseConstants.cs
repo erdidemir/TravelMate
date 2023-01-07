@@ -20,7 +20,7 @@ namespace TravelMate.Application.Constants.Languages
         public const string ThePasswordWasChanged = "The password was changed.";
         public const string EmailSuccessfulyConfirmed = "E-mail successfully confirmed.";
         public const string EmailVerificationFailed = "E-mail verification failed, please try again.";
-        public const string WelcomeToDeliverist = "Welcome to Deliverist.";
+        public const string WelcomeToTravelMate = "Welcome to TravelMate.";
         public const string EmailOrPassWordIncorrent = "E-mail or password incorrect.";
         public const string UserNotFound = "User not found.";
         public const string CountryNotFound = "Country not found.";
