@@ -75,6 +75,10 @@ namespace TravelMate.Infrastructure
             services.AddScoped<ITravelWriteRepository, TravelWriteRepository>();
             services.AddScoped<ITravelService, TravelService>();
 
+            services.AddScoped<ITravelUserReadRepository, TravelUserReadRepository>();
+            services.AddScoped<ITravelUserWriteRepository, TravelUserWriteRepository>();
+            services.AddScoped<ITravelUserService, TravelUserService>();
+
             #endregion
 
             return services;

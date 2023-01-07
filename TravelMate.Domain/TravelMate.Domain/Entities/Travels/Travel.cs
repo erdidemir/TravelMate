@@ -19,9 +19,11 @@ namespace TravelMate.Domain.Entities.Travels
 
         public int SeatingCapacity { get; set; }
 
-
         public User User { get; set; }
         public Location DepartLocation { get; set; }
         public Location ArriveLocation { get; set; }
+
+        public ICollection<TravelUser> TravelUsers { get; set; }
+
     }
 }

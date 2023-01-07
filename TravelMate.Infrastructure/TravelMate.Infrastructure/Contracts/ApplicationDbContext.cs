@@ -58,6 +58,7 @@ namespace TravelMate.Infrastructure.Contracts
 
             modelBuilder.ApplyConfiguration(new LocationConfiguration());
             modelBuilder.ApplyConfiguration(new TravelConfiguration());
+            modelBuilder.ApplyConfiguration(new TravelUserConfiguration());
 
             #endregion
 
@@ -77,6 +78,7 @@ namespace TravelMate.Infrastructure.Contracts
         #region Languages
         public DbSet<Location> Locations { get; set; }
         public DbSet<Travel> Travels { get; set; }
+        public DbSet<TravelUser> TravelUsers { get; set; }
 
         #endregion
 

@@ -10,7 +10,7 @@ namespace TravelMate.Domain.Entities.Authentications
     /// </summary>
     public class User : IdentityUser<int>
     {
-       
+
         public string FullName
         {
             get
@@ -37,8 +37,10 @@ namespace TravelMate.Domain.Entities.Authentications
 
         public ICollection<Location> Locations { get; set; }
         public ICollection<Travel> Travels { get; set; }
+        public ICollection<TravelUser> TravelUsers { get; set; }
     }
-
 }
 
-   
+
+
+

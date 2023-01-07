@@ -4,28 +4,24 @@ using TravelMate.Domain.Entities.Travels;
 
 namespace TravelMate.Domain.Configurations.Travels
 {
-    public class TravelConfiguration : EntityTypeConfigurationBase<Travel>
+    public class TravelUserConfiguration : EntityTypeConfigurationBase<TravelUser>
     {
-        public override void Configure(EntityTypeBuilder<Travel> entity)
+        public override void Configure(EntityTypeBuilder<TravelUser> entity)
         {
 
             base.Configure(entity);
 
-            entity.Property(p => p.DepartLocationId).IsRequired();
-            entity.Property(p => p.DepartTime).IsRequired();
-            entity.Property(p => p.ArriveLocationId).IsRequired();
-
+            entity.Property(p => p.UserId).IsRequired();
+            entity.Property(p => p.TravelId).IsRequired();
+           
             #region ForeingKey
 
-            entity.HasOne(x => x.ArriveLocation).WithMany(x => x.ArriveTravels).HasForeignKey(x => x.ArriveLocationId);
-            entity.HasOne(x => x.DepartLocation).WithMany(x => x.DepartTravels).HasForeignKey(x => x.DepartLocationId);
-
-            entity.HasOne(x => x.User).WithMany(x => x.Travels).HasForeignKey(x => x.UserId);
+            entity.HasOne(x => x.Travel).WithMany(x => x.TravelUsers).HasForeignKey(x => x.TravelId);
+            entity.HasOne(x => x.User).WithMany(x => x.TravelUsers).HasForeignKey(x => x.UserId);
 
             #endregion
 
             #region Index
-
 
             #endregion
         }

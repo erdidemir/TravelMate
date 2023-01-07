@@ -62,6 +62,11 @@ namespace TravelMate.Application.Mappings
                  .ForMember(dest => dest.ArriveLocationCityName, opt => opt.MapFrom(src => src.ArriveLocation.CityName))
                  .ForMember(dest => dest.ArriveLocationName, opt => opt.MapFrom(src => src.ArriveLocation.Name)).ReverseMap();
 
+
+
+            CreateMap<TravelUser, AddTravelUserCommand>().ReverseMap();
+            CreateMap<TravelUser, TravelUserViewModel>().ReverseMap();
+
             #endregion
         }
     }
