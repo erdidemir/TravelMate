@@ -13,6 +13,9 @@ using TravelMate.Domain.Entities.Languages;
 using TravelMate.Domain.Entities.Settings;
 using TravelMate.Domain.Enums.Settings;
 using TravelMate.Application.Models.Settings;
+using TravelMate.Domain.Entities.Travels;
+using TravelMate.Application.Features.Commands.Travels.Adds;
+using TravelMate.Application.Models.Travels;
 
 namespace TravelMate.Application.Mappings
 {
@@ -47,6 +50,13 @@ namespace TravelMate.Application.Mappings
             CreateMap<Country, CountryViewModel>().ReverseMap();
             CreateMap<Country, CountryNameAndPhoneCodeViewModel>().ReverseMap();
             CreateMap<CountryListModel, BaseEnumViewModel>().ReverseMap();
+
+            #endregion
+
+            #region Travels
+
+            CreateMap<Travel, AddTravelCommand>().ReverseMap();
+            CreateMap<Travel, TravelViewModel>().ReverseMap();
 
             #endregion
         }

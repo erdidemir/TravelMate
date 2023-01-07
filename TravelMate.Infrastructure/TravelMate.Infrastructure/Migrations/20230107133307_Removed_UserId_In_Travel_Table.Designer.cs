@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using TravelMate.Infrastructure.Contracts;
@@ -11,9 +12,11 @@ using TravelMate.Infrastructure.Contracts;
 namespace TravelMate.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230107133307_Removed_UserId_In_Travel_Table")]
+    partial class RemovedUserIdInTravelTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -409,7 +412,7 @@ namespace TravelMate.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<int?>("UserId")
+                    b.Property<int>("UserId")
                         .HasColumnType("integer");
 
                     b.HasKey("Id");
@@ -461,7 +464,7 @@ namespace TravelMate.Infrastructure.Migrations
                     b.Property<int>("SeatingCapacity")
                         .HasColumnType("integer");
 
-                    b.Property<int>("UserId")
+                    b.Property<int?>("UserId")
                         .HasColumnType("integer");
 
                     b.HasKey("Id");
@@ -543,9 +546,13 @@ namespace TravelMate.Infrastructure.Migrations
                         .WithMany("Locations")
                         .HasForeignKey("CountryCode");
 
-                    b.HasOne("TravelMate.Domain.Entities.Authentications.User", null)
+                    b.HasOne("TravelMate.Domain.Entities.Authentications.User", "User")
                         .WithMany("Locations")
-                        .HasForeignKey("UserId");
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("TravelMate.Domain.Entities.Travels.Travel", b =>
@@ -562,17 +569,13 @@ namespace TravelMate.Infrastructure.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("TravelMate.Domain.Entities.Authentications.User", "User")
+                    b.HasOne("TravelMate.Domain.Entities.Authentications.User", null)
                         .WithMany("Travels")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("UserId");
 
                     b.Navigation("ArriveLocation");
 
                     b.Navigation("DepartLocation");
-
-                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("TravelMate.Domain.Entities.Authentications.User", b =>

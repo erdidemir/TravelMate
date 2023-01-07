@@ -16,6 +16,7 @@ namespace TravelMate.Domain.Configurations.Travels
 
             #region ForeingKey
 
+
             #endregion
 
             #region Index

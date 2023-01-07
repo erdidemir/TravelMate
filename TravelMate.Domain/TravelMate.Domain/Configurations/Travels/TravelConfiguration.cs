@@ -20,6 +20,8 @@ namespace TravelMate.Domain.Configurations.Travels
             entity.HasOne(x => x.ArriveLocation).WithMany(x => x.ArriveTravels).HasForeignKey(x => x.ArriveLocationId);
             entity.HasOne(x => x.DepartLocation).WithMany(x => x.DepartTravels).HasForeignKey(x => x.DepartLocationId);
 
+            entity.HasOne(x => x.User).WithMany(x => x.Travels).HasForeignKey(x => x.UserId);
+
             #endregion
 
             #region Index

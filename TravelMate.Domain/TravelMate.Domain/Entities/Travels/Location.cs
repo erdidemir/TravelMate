@@ -11,14 +11,11 @@ namespace TravelMate.Domain.Entities.Travels
 {
     public class Location : EntityBase
     {
-        public int UserId { get; set; }
         public string Name { get; set; }
         public string CityName { get; set; }
         public decimal? Longitude { get; set; }
         public decimal? Latitude { get; set; }
         public bool IsIn { get; set; }
-
-        public User User { get; set; }
 
         public ICollection<Travel> DepartTravels { get; set; }
         public ICollection<Travel> ArriveTravels { get; set; }
