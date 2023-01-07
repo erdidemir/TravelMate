@@ -1,7 +1,17 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using TravelMate.Application.Contracts.Repositories.Commons;
+using TravelMate.Application.Contracts.Repositories.Languages;
+using TravelMate.Application.Services.Authentications;
+using TravelMate.Application.Services.Commons;
+using TravelMate.Application.Services.Languages;
 using TravelMate.Infrastructure.Contracts;
+using TravelMate.Infrastructure.Contracts.Repositories.Commons;
+using TravelMate.Infrastructure.Contracts.Repositories.Languages;
+using TravelMate.Infrastructure.Services.Authentications;
+using TravelMate.Infrastructure.Services.Commons;
+using TravelMate.Infrastructure.Services.Languages;
 
 namespace TravelMate.Infrastructure
 {
@@ -12,6 +22,32 @@ namespace TravelMate.Infrastructure
             services.AddDbContext<ApplicationDbContext>(options =>
                                       options.UseNpgsql(configuration.GetConnectionString("DefaultConnection")), ServiceLifetime.Transient);
 
+            #region Authentications
+
+            services.AddScoped<IUserService, UserService>();
+
+            #endregion
+
+            #region Commons
+
+            services.AddScoped(typeof(IReadRepository<>), typeof(ReadRepository<>));
+            services.AddScoped(typeof(IWriteRepository<>), typeof(WriteRepository<>));
+
+
+            services.AddScoped(typeof(IServiceBase<>), typeof(ServiceBase<>));
+            #endregion
+
+            #region Language
+
+            services.AddScoped<ILanguageReadRepository, LanguageReadRepository>();
+            services.AddScoped<ILanguageWriteRepository, LanguageWriteRepository>();
+            services.AddScoped<ILanguageService, LanguageService>();
+
+            services.AddScoped<ILanguageResourceReadRepository, LanguageResourceReadRepository>();
+            services.AddScoped<ILanguageResourceWriteRepository, LanguageResourceWriteRepository>();
+            services.AddScoped<ILanguageResourceService, LanguageResourceService>();
+
+            #endregion
 
             return services;
         }

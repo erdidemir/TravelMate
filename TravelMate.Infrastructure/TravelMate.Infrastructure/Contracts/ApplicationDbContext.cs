@@ -1,8 +1,10 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using TravelMate.Domain.Configurations.Languages;
 using TravelMate.Domain.Configurations.Settings;
 using TravelMate.Domain.Entities.Authentications;
 using TravelMate.Domain.Entities.Commons;
+using TravelMate.Domain.Entities.Languages;
 using TravelMate.Domain.Entities.Settings;
 
 namespace TravelMate.Infrastructure.Contracts
@@ -41,16 +43,32 @@ namespace TravelMate.Infrastructure.Contracts
             #region Settings
 
             modelBuilder.ApplyConfiguration(new CountryConfiguration());
-           
+
+            #endregion
+
+            #region Languages
+            
+            modelBuilder.ApplyConfiguration(new LanguageConfiguration());
+            modelBuilder.ApplyConfiguration(new LanguageResourceConfiguration());
+            
             #endregion
 
         }
 
         #region Settings
         public DbSet<Country> Countries { get; set; }
+       
         #endregion
 
-     
+        #region Languages
+        public DbSet<Language> Languages { get; set; }
+        public DbSet<LanguageResource> LanguageResources { get; set; }
+        
+        #endregion
+
+
+
+
 
     }
 }
